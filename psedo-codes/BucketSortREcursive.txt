@@ -1,0 +1,8 @@
+BucketSortRecursive(array A, int n)
+    create buckets
+    for i = 0 to n - 1
+        insert A[i] into appropriate bucket
+    for each bucket
+        apply any sorting algorithm (e.g., InsertionSort) to sort elements in the bucket
+    concatenate sorted buckets
+

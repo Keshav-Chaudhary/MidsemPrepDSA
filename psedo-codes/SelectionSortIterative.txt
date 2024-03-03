@@ -1,0 +1,8 @@
+SelectionSortIterative(array A)
+    n = A.length
+    for i = n - 1 down to 1
+        max_index = 0
+        for j = 1 to i
+            if A[j] > A[max_index]
+                max_index = j
+        swap(A[max_index], A[i])

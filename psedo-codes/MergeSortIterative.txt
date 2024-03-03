@@ -1,0 +1,7 @@
+MergeSortIterative(array A)
+    n = A.length
+    for curr_size = 1 to n - 1 by doubling
+        for left_start = 0 to n - 1 by doubling
+            mid = min(left_start + curr_size - 1, n - 1)
+            right_end = min(left_start + 2 * curr_size - 1, n - 1)
+            Merge(A, left_start, mid, right_end)

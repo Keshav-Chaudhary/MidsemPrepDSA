@@ -1,0 +1,13 @@
+QuickSortIterative(array A, int low, int high)
+    create an auxiliary stack
+    push low and high onto the stack
+    while stack is not empty
+        high = stack.pop()
+        low = stack.pop()
+        pivot = Partition(A, low, high)
+        if pivot - 1 > low
+            push low onto the stack
+            push pivot - 1 onto the stack
+        if pivot + 1 < high
+            push pivot + 1 onto the stack
+            push high onto the stack

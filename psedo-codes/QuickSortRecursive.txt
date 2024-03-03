@@ -1,0 +1,15 @@
+QuickSortRecursive(array A, int low, int high)
+    if low < high
+        pivot = Partition(A, low, high)
+        QuickSortRecursive(A, low, pivot - 1)
+        QuickSortRecursive(A, pivot + 1, high)
+
+Partition(array A, int low, int high)
+    pivot = A[high]
+    i = low - 1
+    for j = low to high - 1
+        if A[j] <= pivot
+            i++
+            Swap(A[i], A[j])
+    Swap(A[i + 1], A[high])
+    return i + 1

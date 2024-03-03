@@ -1,0 +1,34 @@
+MergeSortRecursive(array A)
+    if A.length <= 1
+        return A
+    mid = A.length / 2
+    leftArray = MergeSortRecursive(A[0...mid - 1])
+    rightArray = MergeSortRecursive(A[mid...A.length - 1])
+    return Merge(leftArray, rightArray)
+
+Merge(leftArray, rightArray)
+    mergedArray = new array of size (leftArray.length + rightArray.length)
+    // Merge leftArray and rightArray into mergedArray
+    i = j = k = 0
+    while i < leftArray.length and j < rightArray.length
+        if leftArray[i] <= rightArray[j]
+            mergedArray[k] = leftArray[i]
+            i++
+        else
+            mergedArray[k] = rightArray[j]
+            j++
+        k++
+    // Copy remaining elements of leftArray, if any
+    while i < leftArray.length
+        mergedArray[k] = leftArray[i]
+        i++
+        k++
+    // Copy remaining elements of rightArray, if any
+    while j < rightArray.length
+        mergedArray[k] = rightArray[j]
+        j++
+        k++
+    return mergedArray
+
+
+    

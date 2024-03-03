@@ -1,0 +1,9 @@
+reverseLinkedList(head):
+    prev = null
+    curr = head
+    while curr is not null:
+        nextNode = curr.next
+        curr.next = prev
+        prev = curr
+        curr = nextNode
+    head = prev

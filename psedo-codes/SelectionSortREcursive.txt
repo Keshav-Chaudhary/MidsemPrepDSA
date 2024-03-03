@@ -1,0 +1,13 @@
+SelectionSortRecursive(array A, int n)
+    if n <= 1
+        return
+    max_index = findMaxIndex(A, n)
+    swap(A[max_index], A[n - 1])
+    SelectionSortRecursive(A, n - 1)
+
+findMaxIndex(array A, int n)
+    max_index = 0
+    for i = 1 to n - 1
+        if A[i] > A[max_index]
+            max_index = i
+    return max_index
