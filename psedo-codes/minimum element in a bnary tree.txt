@@ -1,0 +1,22 @@
+// 14. Algorithm to Find Minimum Element in a Binary Tree:
+
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
+
+int findMin(TreeNode* root) {
+    if (root == nullptr)
+        return INT_MAX;
+    else if (root->left == nullptr)
+        return root->val;
+    else
+        return findMin(root->left);
+}
+
+int main() {
+    // QuickSort and MergeSort can be demonstrated here.
+    return 0;
+}
